@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="panel panel-priamry">
+<div class="panel panel-primary">
 	<div class="panel-heading">
 	  <%= @blog_post.title %>
 	 </div>
@@ -18,6 +18,19 @@
 		<%= render 'comments/form' %>
 	</div>
 </div>
+
+<div class="panel panel-primary">
+	<div class="panel-header">
+		<h4>Comments</h4>
+	</div>
+	<% @blog_post.comments.each do |comment| %>
+	<div class="panel-body">
+		<p><strong><%= comment.author %></strong>said: </p>
+		<p><%= comment.comment_entry %></p>
+	</div>
+	<% end %>
+</div>
+
 
 <div>
 	<%= link_to 'Edit', edit_blog_post_path(@blog_post), class: "btn btn-primary" %> 
