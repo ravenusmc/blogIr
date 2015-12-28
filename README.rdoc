@@ -3,5 +3,3 @@
 This project is another blog. I have built quite a few of these but I have never completely gone through the TTS lessons, since the class, to completely do a blog. That is what I intend to do with this project. I also plan on launching it and getting it up on the web. Hopefully, if all goes as planned, I will be blogging in here about stuff going on in foreign policy-which is what I studied in college and for my Masters degree. I will continue to add to this Readme as this project expands. 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
