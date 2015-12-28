@@ -8,7 +8,8 @@
       <div class="col-md-6">
         <div class="panel panel-info">
           <div class="panel-heading">
-            <%= link_to blog_post.title, blog_post %>
+            <p><%= link_to blog_post.title, blog_post %></p>
+            <p><%= blog_post.created_at.strftime('%m/%d/%Y') %></p>
           </div>
           <div class="panel-body">
             By: <%= blog_post.author %><br />
