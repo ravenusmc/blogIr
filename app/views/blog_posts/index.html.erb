@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<div class="container blog_index">
 <h1>Mike's Blog on Foreign Policy</h1>
 
   <div class="row">
@@ -22,7 +23,6 @@
     <% end %>
   </div>
 
+<%= link_to 'New Blog post', new_blog_post_path, class: "btn btn-primary" %><br />
 
-
-
-<%= link_to 'New Blog post', new_blog_post_path, class: "btn btn-primary" %>
+</div><br />
