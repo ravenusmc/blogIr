@@ -6,6 +6,7 @@ In the development of this project, it looks as if I may make it my main page. I
 
 This app has the following gem's installed:
 
-bootstrap
+Bootstrap
+Devise 
 
 
