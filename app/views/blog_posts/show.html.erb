@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<div class="container">
 <div class="panel panel-primary">
 	<div class="panel-heading">
 	  <%= @blog_post.title %>
@@ -27,7 +28,7 @@
 	<div class="panel-body">
 		<p><strong><%= comment.author %> </strong>said: </p>
 		<p><%= comment.comment_entry %></p>
-		<p><%= comment.created_at.strftime('%m/%d/%Y') %></p>
+		<p><%= comment.created_at.strftime('%m/%d/%Y %H:%M:%S') %></p>
 	</div>
 	<% end %>
 </div>
@@ -36,4 +37,6 @@
 <div>
 	<%= link_to 'Edit', edit_blog_post_path(@blog_post), class: "btn btn-primary" %> 
 	<%= link_to 'Back', blog_posts_path, class: "btn btn-info" %>
+</div>
+
 </div>
