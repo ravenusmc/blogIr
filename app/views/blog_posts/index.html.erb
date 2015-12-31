@@ -2,6 +2,7 @@
 
 <div class="container blog_index">
   <h1>Mike's Blog on Foreign Policy <i class="fa fa-globe"></i></h1>
+  <h6>Other Blog's included here as well!</h6>
     <div class="row">
       <% @blog_posts.each do |blog_post| %>
         <div class="col-md-6">
@@ -11,12 +12,14 @@
               <p><%= blog_post.created_at.strftime('%m/%d/%Y') %></p>
             </div>
             <div class="panel-body">
-              By: <%= blog_post.user.username %><br />
+              <p>By:<strong><%= link_to blog_post.user.username, user_profile_path(id: blog_post.user.id) %></strong></p><br />
               <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "Read More", blog_post %>]</p>
             </div>
             <div class="panel-footer">
-              <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-warning" %>
-              <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+              <% if blog_post.user.id == current_user.id %>
+                <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-warning" %>
+                <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+              <% end %>
             </div>
           </div>
         </div>

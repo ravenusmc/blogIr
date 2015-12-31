@@ -8,7 +8,10 @@ class BlogPostsController < ApplicationController
   end
 
   def your_posts
-    @blog_posts = BlogPost.all.page(params[:page])
+  end 
+
+  def user_profile 
+    @user = User.find(params[:id])
   end 
 
   # GET /blog_posts/1

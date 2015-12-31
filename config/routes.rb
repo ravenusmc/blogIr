@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'your_posts' => 'blog_posts#your_posts'
 
+  get 'user_profile' => 'blog_posts#user_profile'
+
   resources :comments
   resources :blog_posts
   # The priority is based upon order of creation: first created -> highest priority.

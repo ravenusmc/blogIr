@@ -1,15 +1,16 @@
-<p id="notice"><%= notice %></p>
+
 
 <div class="container">
-<div class="panel panel-primary">
-	<div class="panel-heading">
-	  <%= @blog_post.title %>
-	 </div>
-	 <div class="panel-body">
-	 	<p>By: <%= @blog_post.user.username %></p>
-	 	<p><%= @blog_post.blog_entry %></p>
-	</div>
-</div>
+	<p id="notice"><%= notice %></p>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+			  <%= @blog_post.title %>
+			 </div>
+			 <div class="panel-body">
+			 	<p>By:<strong><%= @blog_post.user.username %></strong></p>
+			 	<p><%= @blog_post.blog_entry %></p>
+			</div>
+		</div>
 
 <div class="panel panel-success">
 	<div class="panel-heading">
@@ -26,7 +27,7 @@
 	</div>
 	<% @blog_post.comments.each do |comment| %>
 	<div class="panel-body">
-		<p><strong><%= comment.user.username %> </strong>said: </p>
+		<p><strong><%= comment.user.username %></strong>said: </p>
 		<p><%= comment.comment_entry %></p>
 		<p><%= comment.created_at.strftime('%m/%d/%Y %H:%M:%S') %></p>
 	</div>
@@ -34,9 +35,11 @@
 </div>
 
 
-<div>
-	<%= link_to 'Edit', edit_blog_post_path(@blog_post), class: "btn btn-primary" %> 
-	<%= link_to 'Back', blog_posts_path, class: "btn btn-info" %>
-</div>
+<% if current_user.id == @blog_post.user.id %>
+	<div>
+		<%= link_to 'Edit', edit_blog_post_path(@blog_post), class: "btn btn-primary" %> 
+		<%= link_to 'Back', blog_posts_path, class: "btn btn-info" %>
+	</div>
+<% end %>
 
 </div>
