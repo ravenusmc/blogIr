@@ -9,6 +9,6 @@ This app has the following gem's installed:
 Bootstrap
 Devise 
 Font-Awesome 
-Kaminari
+Kaminari, with bootstrap theme 
 
 
