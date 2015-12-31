@@ -1,8 +1,8 @@
 <div class="container">
-	<h1>Editing Blog Post</h1>
+	<h1>Editing Blog Post <i class="fa fa-pencil"></i></h1>
 
 	<%= render 'form' %>
 
-	<%= link_to 'Show', @blog_post %> |
-	<%= link_to 'Back', blog_posts_path %>
+	<%= link_to 'Show', @blog_post, class: "btn btn-primary" %> |
+	<%= link_to 'Back', blog_posts_path, class: "btn btn-info" %>
 </div>
