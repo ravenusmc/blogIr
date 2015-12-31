@@ -7,6 +7,10 @@ class BlogPostsController < ApplicationController
     @blog_posts = BlogPost.all.page(params[:page])
   end
 
+  def your_posts
+    @blog_posts = BlogPost.all.page(params[:page])
+  end 
+
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
