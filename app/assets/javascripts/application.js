@@ -15,3 +15,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var phrase = "Game Developer";
+
+function change() {
+	var change = document.getElementById('change1');
+	change.textContent = phrase;
+}
