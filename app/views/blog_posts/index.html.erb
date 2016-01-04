@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container blog_index">
-  <h1>Mike's Blog on Foreign Policy <i class="fa fa-globe"></i></h1>
-  <h6>Other Blog's included here as well!</h6>
+  <h1 class="blog_top"><i class="fa fa-globe"></i> Mike's Blog on Foreign Policy <i class="fa fa-globe"></i></h1>
+  <h6 class="blog_top">Other Blog's included here as well!</h6>
     <div class="row">
       <% @blog_posts.each do |blog_post| %>
         <div class="col-md-6">
           <div class="panel panel-info">
             <div class="panel-heading">
-              <p><%= link_to blog_post.title, blog_post %></p>
+              <p><%= link_to blog_post.title, blog_post, class: "btn btn-primary" %></p>
               <p><%= blog_post.created_at.strftime('%m/%d/%Y') %></p>
             </div>
             <div class="panel-body">
