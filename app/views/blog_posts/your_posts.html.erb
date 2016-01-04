@@ -1,11 +1,11 @@
 <div class="container blog_index">
-  <h1><%= current_user.username %>'s Blog!</h1>
+  <h1 class="blog_top"><%= current_user.username %>'s Blog!</h1>
     <div class="row">
       <% current_user.blog_posts.each do |blog_post| %>
         <div class="col-md-12">
           <div class="panel panel-info">
             <div class="panel-heading">
-              <p><%= link_to blog_post.title, blog_post %></p>
+              <p><%= link_to blog_post.title, blog_post, class: "btn btn-primary" %></p>
               <p><%= blog_post.created_at.strftime('%m/%d/%Y') %></p>
             </div>
             <div class="panel-body">
