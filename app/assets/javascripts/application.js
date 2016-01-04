@@ -20,5 +20,9 @@ var phrase = "Game Developer / Writer";
 
 function change() {
 	var change = document.getElementById('change1');
-	change.textContent = phrase;
+	if (change.innerHTML === "Veteran / Web Developer") {
+		change.innerHTML = phrase;
+	} else {
+		change.innerHTML = "Veteran / Web Developer";
+	}
 }
