@@ -16,7 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
-var phrase = "Game Developer";
+var phrase = "Game Developer / Writer";
 
 function change() {
 	var change = document.getElementById('change1');
