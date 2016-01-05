@@ -11,4 +11,6 @@ Devise
 Font-Awesome 
 Kaminari, with bootstrap theme 
 
+To find this project online head to: https://cuddy-blog.herokuapp.com/
+
 
